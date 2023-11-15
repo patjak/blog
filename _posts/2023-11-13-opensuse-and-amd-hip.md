@@ -13,7 +13,7 @@ Here's how AMD describes HIP:
 
 Here's a very simplified example of HIP code:
 
-## main.cpp
+## hip-example.cpp
 ```
 #include <hip/hip_runtime.h>
 
@@ -72,4 +72,20 @@ $ zypper install rocm-hip-sdk
 Or if you need a specific version for which you have also added the repo in the previous step
 ```
 $ zypper install rocm-hip-sdk5.6.1
+```
+
+# Testing the installation
+Now with everything in place, you should be able to run a few tests.
+
+## Query your devices
+To check if ROCm detects your devices you can run the following command:
+```
+$ rocminfo
+```
+You should see two agents. "Agent 1" is normally your CPU and "Agent 2" is your GPU. ROCm also contains support for OpenCL but this doesn't work out-of-the-box. I'll cover how to get OpenCL working in another blog post.
+## Compile a program
+Here is a sample program that you should be able to compile:
+### main.cpp
+```
+
 ```
